@@ -4,6 +4,7 @@ import Dropdown from '@/Components/Dropdown';
 import NavLink from '@/Components/NavLink';
 import ResponsiveNavLink from '@/Components/ResponsiveNavLink';
 import { Link } from '@inertiajs/inertia-react';
+import AuthOnly from '@/Components/AuthOnly';
 
 export default function Authenticated({ auth, header, children }) {
     const [showingNavigationDropdown, setShowingNavigationDropdown] = useState(false);
@@ -20,16 +21,19 @@ export default function Authenticated({ auth, header, children }) {
                             </Link>
                         </div>
 
-                        <div className="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                            <NavLink href={route('dashboard')} active={route().current('dashboard')}>
-                                Dashboard
-                            </NavLink>
-                        </div>
+                     
                         <div className="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                             <NavLink href={route('posts')} active={route().current('posts')}>
                                 Posts
                             </NavLink>
                         </div>
+                        <AuthOnly {...{auth}}>
+                        <div className="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                            <NavLink href={route('post.create')} active={route().current('post.create')}>
+                                Create Post
+                            </NavLink>
+                        </div>
+                        </AuthOnly>
                     </div>
 
                     <div className="hidden sm:flex sm:items-center sm:ml-6">
@@ -109,16 +113,20 @@ export default function Authenticated({ auth, header, children }) {
             </div>
 
             <div className={(showingNavigationDropdown ? 'block' : 'hidden') + ' sm:hidden'}>
-                <div className="pt-2 pb-3 space-y-1">
-                    <ResponsiveNavLink href={route('dashboard')} active={route().current('dashboard')}>
-                        Dashboard
-                    </ResponsiveNavLink>
-                </div>
+                
                 <div className="pt-2 pb-3 space-y-1">
                     <ResponsiveNavLink href={route('posts')} active={route().current('posts')}>
                         Posts
                     </ResponsiveNavLink>
                 </div>
+                
+                <AuthOnly {...{auth}}>
+                <div className="pt-2 pb-3 space-y-1">
+                    <ResponsiveNavLink href={route('post.create')} active={route().current('post.create')}>
+                        Create Post
+                    </ResponsiveNavLink>
+                </div>
+                </AuthOnly>
 
                 <div className="pt-4 pb-1 border-t border-gray-200 dark:border-slate-700">
                     <div className="px-4">
