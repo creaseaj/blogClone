@@ -4665,11 +4665,11 @@ function Pagination(_ref) {
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
         className: "flex-1 flex justify-between sm:hidden",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
-          href: "posts?page=".concat(pageData.current_page - 1),
+          href: "?page=".concat(pageData.current_page - 1),
           className: "relative inline-flex items-center px-4 py-2 border border-gray-300 dark:border-slate-700 text-sm font-medium rounded-md text-gray-700 bg-white dark:bg-slate-900 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800",
           children: " Previous "
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
-          href: "posts?page=".concat(pageData.current_page + 1),
+          href: "?page=".concat(pageData.current_page + 1),
           className: "relative inline-flex items-center px-4 py-2 border border-gray-300 dark:border-slate-700 text-sm font-medium rounded-md text-gray-700 bg-white dark:bg-slate-900 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800",
           children: " Next "
         })]
@@ -4694,7 +4694,7 @@ function Pagination(_ref) {
             className: "relative z-0 inline-flex rounded-md shadow-sm -space-x-px",
             "aria-label": "Pagination",
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
-              href: "posts?page=".concat(pageData.current_page - 1),
+              href: "?page=".concat(pageData.current_page - 1),
               className: "relative inline-flex items-center px-2 py-2 rounded-l-md border border-gray-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-sm font-medium text-gray-500 dark:hover:bg-slate-800 hover:bg-gray-50",
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("span", {
                 className: "sr-only",
@@ -4713,13 +4713,13 @@ function Pagination(_ref) {
               })]
             }), _toConsumableArray(Array(pageData.last_page)).map(function (link, idx) {
               return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
-                href: "posts?page=".concat(idx + 1),
+                href: "?page=".concat(idx + 1),
                 "aria-current": "page",
                 className: "px-4 py-2 border text-sm font-medium ".concat(pageData.current_page == idx + 1 ? 'z-10 bg-indigo-50 dark:bg-indigo-900 dark:text-indigo-300 border-indigo-500 text-indigo-600' : 'bg-white dark:bg-slate-900 border-gray-300 dark:border-slate-700 text-gray-500 hover:bg-gray-500 dark:hover:bg-slate-800'),
                 children: idx + 1
               }, idx);
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
-              href: "posts?page=".concat(pageData.current_page + 1),
+              href: "?page=".concat(pageData.current_page + 1),
               className: "relative inline-flex items-center px-2 py-2 rounded-r-md border border-gray-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-sm font-medium text-gray-500 dark:hover:bg-slate-800 hover:bg-gray-50",
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("span", {
                 className: "sr-only",
