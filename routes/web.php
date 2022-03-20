@@ -25,9 +25,7 @@ use Inertia\Inertia;
 //     ]);
 // });
 
-Route::get('/post', function () {
-    return Inertia::render('Dashboard');
-})->middleware(['auth', 'verified'])->name('post.create');
+Route::get('/post', [PostController::class, 'create'])->middleware(['auth', 'verified'])->name('post.create');
 
 Route::get('/', [PostController::class, 'list'])->name('posts');
 
