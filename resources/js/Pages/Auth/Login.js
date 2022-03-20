@@ -36,7 +36,7 @@ export default function Login({ status, canResetPassword }) {
 
             {status && <div className="mb-4 font-medium text-sm text-green-600">{status}</div>}
 
-            <ValidationErrors errors={errors} />
+                <ValidationErrors errors={errors} />
 
             <form onSubmit={submit}>
                 <div>
@@ -78,7 +78,7 @@ export default function Login({ status, canResetPassword }) {
                     {canResetPassword && (
                         <Link
                             href={route('password.request')}
-                            className="underline text-sm text-gray-600 hover:text-gray-900"
+                            className="underline text-sm text-gray-600 hover:text-gray-900 dark:hover:text-gray-200"
                         >
                             Forgot your password?
                         </Link>

@@ -9,7 +9,7 @@ export default function Posts({ posts, auth, errors }) {
         <Authenticated
             auth={auth}
             errors={errors}
-            header={<h2 className="font-semibold text-xl text-gray-800 leading-tight">Posts</h2>}
+            header={<h2 className="font-semibold text-xl leading-tight">Posts</h2>}
         >
             <Head title="Posts" />
             {                

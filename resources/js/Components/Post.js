@@ -5,7 +5,7 @@ export default function Post({ post }) {
     return (
         <div className='mx-[50px] xl:mx-auto xl:max-w-[1000px] w-[calc(100vw-100px)] '>
             <Link href={route('post', [post.id])}>
-                <div className=' bg-white transition-all hover:shadow-md rounded-md border mx-auto m-4 p-5'>
+                <div className=' bg-white dark:bg-slate-800 dark:text-white transition-all hover:shadow-md rounded-md  mx-auto m-4 p-5'>
                     <div className='mx-auto text-xl w-max'>{post.title}</div>
                     <div>{post.content}</div>
                     <div className='text-grey-200 font-normal underline italic'>{post.user.name}</div>
